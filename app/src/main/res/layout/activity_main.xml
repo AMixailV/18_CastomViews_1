@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/includeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/include_buttons"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/includeButtons"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/includeText"/>
+
+    <TextView
+        android:id="@+id/atrrsXmlText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/attrs_xml_buttons"
+        app:layout_constraintTop_toBottomOf="@+id/includeButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ru.mixail_akulov.a18_castomviews_1.BottomButtonsView
+        android:id="@+id/atrrsXmlButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:bottomNegativeBackgroundColor="@color/teal_200"
+        app:bottomPositiveBackgroundColor="@color/orange"
+        app:bottomProgressMode="false"
+        app:bottomPositiveButtonText="@string/apply"
+        app:bottomNegativeButtonText="@string/reject"
+        app:layout_constraintTop_toBottomOf="@+id/atrrsXmlText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/styleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/style_buttons"
+        app:layout_constraintTop_toBottomOf="@+id/atrrsXmlButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ru.mixail_akulov.a18_castomviews_1.BottomButtonsView
+        android:id="@+id/styleButtons"
+        style="@style/ConcreteMyButtonsStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:bottomProgressMode="false"
+        app:bottomPositiveButtonText="@string/apply"
+        app:bottomNegativeButtonText="@string/reject"
+        app:layout_constraintTop_toBottomOf="@+id/styleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/defStyleAttrsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/defStyleAttrs_buttons_0"
+        app:layout_constraintTop_toBottomOf="@+id/styleButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+<!--    Чтобы принял 0 из
+constructor(context: Context,attrs: AttributeSet?, defStyleAttr: Int)
+            : this(context, attrs, defStyleAttr,0)
+надо убрать все стили.-->
+    <ru.mixail_akulov.a18_castomviews_1.BottomButtonsView
+        android:id="@+id/defStyleAttrsButtons"
+        style="@style/DefStyleAttrsButtonsStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:bottomProgressMode="false"
+        app:bottomPositiveButtonText="@string/apply"
+        app:bottomNegativeButtonText="@string/reject"
+        app:layout_constraintTop_toBottomOf="@+id/defStyleAttrsText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">18_CastomViews_1</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="apply">Apply</string>
+    <string name="reject">Reject</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="attrs_xml_buttons">attrs.xml buttons</string>
+    <string name="include_buttons">include buttons</string>
+    <string name="style_buttons">style buttons</string>
+    <string name="defStyleAttrs_buttons_0">defStyleAttrs buttons = 0</string>
+</resources>
